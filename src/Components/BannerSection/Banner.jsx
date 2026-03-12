@@ -4,7 +4,7 @@ import img2 from './vector2.png'
 
 const Banner = ({progress,resolve}) => {
     return (
-       <div className="grid grid-cols-2 gap-6 pt-10 ">
+       <div className="grid md:grid-cols-2 gap-2 md:gap-6 pt-10 w-full">
   
   <div className=" h-[200px] flex flex-col items-center justify-center rounded-lg text-white 
   bg-gradient-to-r from-purple-600 to-indigo-500">

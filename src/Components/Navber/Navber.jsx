@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navber = () => {
     return (
-        <div className="flex justify-between mb-3 py-3 px-30 items-center ">
+        <div className="flex justify-between mb-3 py-3 md:px-30 items-center ">
             <div>
                 <h1 className='text-[24px] font-bold'>CS — Ticket System</h1>
             </div>

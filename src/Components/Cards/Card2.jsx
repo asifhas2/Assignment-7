@@ -1,12 +1,13 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const Card2 = ({TaskStatus,setResolve,resolve,progress,removeTaskStatus}) => {
+const Card2 = ({TaskStatus,setResolve,resolve,progress,removeTaskStatus,removeDatas}) => {
     // console.log(TaskStatus);
     // console.log(progress);
     const handelResolveBtn = (TaskStatus)=>{
         setResolve([...resolve,TaskStatus])
         removeTaskStatus(TaskStatus);
+        removeDatas(TaskStatus)
         toast("Completed !")
     }
     return (
