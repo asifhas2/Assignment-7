@@ -4,10 +4,10 @@ import './App.css'
 import Navber from './Components/Navber/Navber'
 import Banner from './Components/BannerSection/Banner'
 import MainSection from './Components/Navber/mainSection/MainSection'
-import { Suspense, use, useState } from 'react'
+import { Suspense, useState } from 'react'
 
   const promiss = ()=>{
-    const PromissData = fetch("../public/data.json").then(res=>res.json())  
+    const PromissData = fetch("/data.json").then(res=>res.json())  
    return PromissData;
   }
 
