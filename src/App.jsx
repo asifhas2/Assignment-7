@@ -1,20 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+ import { ToastContainer, toast } from 'react-toastify';
 import Navber from './Components/Navber/Navber'
 import Banner from './Components/BannerSection/Banner'
+import MainSection from './Components/Navber/mainSection/MainSection'
+import { Suspense, use, useState } from 'react'
 
+  const promiss = ()=>{
+    const PromissData = fetch("../public/data.json").then(res=>res.json())  
+   return PromissData;
+  }
+
+const tikitData = promiss();
 function App() {
-  const [count, setCount] = useState(0)
+
+const [progress,setProgress]=useState([]);
+const [resolve,setResolve]=useState([]);
+
+const removeTaskStatus =(removeTask)=>{
+    const filterData = progress.filter(data =>data.id !== removeTask.id);
+    setProgress(filterData);
+}
 
   return (
     <>
-      <div className='max-w-[1000px] mx-auto'>
-          <Navber></Navber>
-            <Banner></Banner>
+
+           <Navber></Navber>
+      <div className='max-w-[1400px] mx-auto bg-[#f2f0f0]'>
+              <Banner progress={progress} resolve={resolve}></Banner>
+             <Suspense fallback={<h1>Loading....</h1>}>
+               <MainSection tikitData={tikitData} setProgress={setProgress} progress={progress} setResolve={setResolve} resolve={resolve} removeTaskStatus={removeTaskStatus}></MainSection>
+             </Suspense>
           
       </div>
+       <ToastContainer />
+
     </>
   )
 }

@@ -1,10 +1,24 @@
 import React from 'react';
+import img1 from './vector1.png'
+import img2 from './vector2.png'
 
-const Banner = () => {
+const Banner = ({progress,resolve}) => {
     return (
-        <div>
-            <h1>ami asif</h1>
-        </div>
+       <div className="grid grid-cols-2 gap-6 pt-10 ">
+  
+  <div className=" h-[200px] flex flex-col items-center justify-center rounded-lg text-white 
+  bg-gradient-to-r from-purple-600 to-indigo-500">
+    <h3 className="text-lg">In-Progress</h3>
+    <h1 className="text-6xl font-bold">{progress.length}</h1>
+  </div>
+
+  <div className="h-[200px] flex flex-col items-center justify-center rounded-lg text-white 
+  bg-gradient-to-r from-green-500 to-teal-600">
+    <h3 className="text-lg">Resolved</h3>
+    <h1 className="text-6xl font-bold">{resolve.length}</h1>
+  </div>
+
+</div>
     );
 };
 
