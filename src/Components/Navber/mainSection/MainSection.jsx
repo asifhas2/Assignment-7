@@ -14,10 +14,10 @@ const MainSection = ({tikitData,setProgress,progress,setResolve,resolve,removeTa
     }
    
     return (
-        <div className="grid md:grid-cols-3 gap-10 mt-10 p-5 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 p-5 ">
             <div className=' col-span-2 '>
                 <h1 className='text-3xl font-semibold mb-5'>Customer Tickets</h1>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 ">
                 {
                 mainData.map(data => <Card1  setProgress={setProgress} data={data} progress={progress} ></Card1>)
             }

@@ -5,6 +5,7 @@ import Navber from './Components/Navber/Navber'
 import Banner from './Components/BannerSection/Banner'
 import MainSection from './Components/Navber/mainSection/MainSection'
 import { Suspense, useState } from 'react'
+import Fotter from './Components/Fotter/Fotter';
 
   const promiss = ()=>{
     const PromissData = fetch("/data.json").then(res=>res.json())  
@@ -26,13 +27,15 @@ const removeTaskStatus =(removeTask)=>{
     <>
 
            <Navber></Navber>
-      <div className='max-w-[1400px] mx-auto bg-[#f2f0f0]'>
-              <Banner progress={progress} resolve={resolve}></Banner>
+           
+      <div className='max-w-[1400px] mx-auto bg-[#f2f0f0] p-10'>
+            <Banner progress={progress} resolve={resolve}></Banner>
              <Suspense fallback={<h1>Loading....</h1>}>
                <MainSection tikitData={tikitData} setProgress={setProgress} progress={progress} setResolve={setResolve} resolve={resolve} removeTaskStatus={removeTaskStatus}></MainSection>
-             </Suspense>
+             </Suspense>    
           
       </div>
+      <Fotter></Fotter>
        <ToastContainer />
 
     </>

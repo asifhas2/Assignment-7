@@ -6,7 +6,7 @@ const Navber = () => {
             <div>
                 <h1 className='text-[24px] font-bold'>CS — Ticket System</h1>
             </div>
-            <div className="flex gap-5 justify-center items-center">
+            <div className="flex gap-5 justify-center items-center ">
                 <h5 className='text-gray-700 font-semibold '>Home</h5>
                 <h5 className='text-gray-700 font-semibold'>FAQ</h5>
                 <h5 className='text-gray-700 font-semibold'>text</h5>

@@ -13,7 +13,7 @@ const Card1 = ({data,setProgress,progress}) => {
     }
 
     return (
-        <div onClick={()=>HandelCardButton(data)} className='flex flex-col gap-3  p-3 shadow-2xs bg-[#FFFFFF] rounded-[7px]'>
+        <div onClick={()=>HandelCardButton(data)} className='flex flex-col gap-3  p-3 shadow-2xs bg-[#FFFFFF] rounded-[7px] w-full '>
             <div className='flex justify-between  items-center'>
                 <h1 className='text-[18px] font-semibold'>{title}</h1>
                 <button className='bg-[#92e7b0] flex items-center px-2 py-1 rounded-2xl gap-1 justify-center font-bold'><span><img src={dott} alt="" /></span> {status}</button>
